@@ -40,6 +40,10 @@ textarea {
 	color: #797D7F;
 }
 button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
 	border-radius: 20px;
 	margin-top: 20px;
 	height: 40px;
@@ -52,8 +56,6 @@ button {
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-button:active {
-}
 button, button:active, button:focus {
     outline: none;
 }
@@ -66,7 +68,7 @@ button, button:active, button:focus {
 	float: left;
 }
 .delete {
-	float: left;
+	float: right;
 	padding: 8px 10px 6px;
 }
 .hide {
