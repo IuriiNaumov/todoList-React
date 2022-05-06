@@ -1,6 +1,7 @@
 html, body {
 	background-color: #F4F6F6;
 	font-family: 'Montserrat';
+	margin: 0;
 }
 input, textarea{
 	width: 100%;
@@ -11,83 +12,92 @@ input, textarea{
     border: 1px solid #EAEDED;
     background-color: #F8F9F9;
     box-sizing: border-box;
+	border-radius: 6px;
 }
+
 textarea {
 	resize: none;
 	height: 200px;
 }
 #fixed-container{
-	width: 960px;
-	margin: 0 auto;	
+	display: flex;
+	gap: 20px;
+	align-items: top;
+	justify-content: center;
 }
 
 #fixed-container > div{
 	width: 470px;
 }
 
-#new-todo{
-	float: right;
-}
-#white-div{
+.addNewTodoForm{
 	background-color: white;
-	padding: 0 30px 30px;
-	overflow: hidden;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	border-radius: 4px;
 }
-#white-div label {
-	margin-top: 30px;
-	display: block;
-	margin-bottom: 10px;
+
+
+.addNewTodoForm label {
 	color: #797D7F;
 }
+
+
 button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 5px;
-	border-radius: 20px;
-	margin-top: 20px;
-	height: 40px;
-	width: 120px;
+	border-radius: 4px;
+	width: 200px;
+	padding: 0.8rem;
 	background-color: #3498DB;
 	color: white;
 	border: none;
-	font-family: 'Montserrat';
-	font-size: 16px;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button, button:active, button:focus {
     outline: none;
 }
+
 .todo {
-	background-color: white;
-	margin-bottom: 20px;
-}
-.todo-header h3{
-	margin: 0;
-	float: left;
-}
-.delete {
-	float: right;
-	padding: 8px 10px 6px;
-}
-.hide {
-	float: right;
-	padding: 10px 10px 7px;
+	background-color: rgb(255, 255, 255);
+	padding: 1rem;
+	border-radius: 4px;
 }
 
-.todo-header img {
-	cursor: pointer;
+.todo-header h3{
+	flex-grow: 1;
+	margin: 0;
+}
+.todos{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.todoLogo{
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.todoLogo img{
+	width: 60px;
+	height: 60px;
 }
 
 .todo-header {
-	overflow: hidden;
-	padding: 20px;
-	border-bottom: 1px solid #EAEDED;
+	display: flex;
+	align-items: center;
+}
+.todo-header > div {
+	padding: 4px 0 0 ;
 }
 
 .content {
-	padding: 20px;
+	padding: 1rem 0;
 }
 
 .error {
