@@ -69,6 +69,7 @@ function NewTodoForm(props) {
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.25 0.75H5.75V5.75H0.75V8.25H5.75V13.25H8.25V8.25H13.25V5.75H8.25V0.75Z" fill="white" />
                         </svg>
+                        Add task
                     </button>
                 </div>
             </form>

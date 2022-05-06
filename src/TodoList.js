@@ -1,4 +1,3 @@
-import "./TodoList.css";
 import TodoListElement from "./TodoListElement";
 import todo from "./images/todo.png";
 export default TodoList;
