@@ -15,7 +15,6 @@ function TodoListElement(props) {
                     </svg>
                 </div>
             </div>
-            <div className="content">{props.content}</div>
         </div>
     );
 }

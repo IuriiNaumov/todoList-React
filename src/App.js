@@ -17,9 +17,6 @@ const INITIAL_TODOS = [
   }
 ];
 
-
-
-
 function App() {
   const [todos, setTodos] = useState(INITIAL_TODOS);
 
@@ -31,14 +28,11 @@ function App() {
     setTodos(prev => prev.filter(todo => todo.id !== id));
   }
 
-
-
   return (
-  <div id="fixed-container">
+  <div className="fixed-container">
     <TodoList todos = {todos} onRemoveTodo={RemoveTodoHandler}/>
     <NewTodoForm onNewTodo = {AddTodoHandler}/>
   </div>  
   );
 }
-
 export default App;

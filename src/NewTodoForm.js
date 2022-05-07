@@ -27,7 +27,6 @@ function NewTodoForm(props) {
             props.onNewTodo({
                 id: Math.random(),
                 title: title,
-                content: content,
             });
             setTitle("");
             setContent("");
