@@ -3,6 +3,15 @@ html, body {
 	font-family: 'Montserrat';
 	margin: 0;
 }
+
+h2{
+	font-family: 'Oswald', sans-serif;
+	margin: 0;
+	padding: 1rem;
+}
+
+
+
 input, textarea{
 	width: 100%;
     line-height: 40px;
@@ -38,6 +47,7 @@ textarea {
 	flex-direction: column;
 	gap: 20px;
 	border-radius: 16px;
+	position: absolute;
 }
 
 
@@ -59,6 +69,7 @@ button {
 	border: none;
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	cursor: pointer;
+	margin: 0 auto;
 }
 
 button, button:active, button:focus {
@@ -67,25 +78,50 @@ button, button:active, button:focus {
 
 .todo {
 	background-color: rgb(255, 255, 255);
-	padding: 1.5rem;
+	padding: 1rem;
 	border-radius: 16px;
+	display: flex;
 }
 
-.todo-header h3{
-	flex-grow: 1;
+.todoInfo > div {
+	color: #797D7F;
+	font-size: 12pt;
+	display: flex;
+	gap: 5px;
+	align-items: center;
 	margin: 0;
+}
+
+.todoInfo > div > img {
+	color: #797D7F;
+	width: 15px;
+	height: 15px;
+}
+
+.todoInfo h3{
+	margin: 0;
+}
+
+.todoInfo {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	gap: 5px;
 }
 
 .todos{
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	width: 100%;
 }
 
 .todoLogo{
 	display: flex;
 	align-items: center;
 	gap: 5px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 14pt;
 }
 
 .todoLogo img{
@@ -94,16 +130,14 @@ button, button:active, button:focus {
 	cursor: pointer;
 }
 
-.todo-header {
-	display: flex;
-	align-items: center;
-}
-
-.todo-header > div {
-	padding: 4px 0 0 ;
-	cursor: pointer;
-}
-
 .error {
 	border-color: #B03A2E;
+}
+
+
+.todoList{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	
 }

@@ -42,8 +42,8 @@ function NewTodoForm(props) {
     };
 
     return (
-        <div id="new-todo">
-            <form onSubmit={formSubmitHandler}>
+        <div className="newTodoForm">
+            <form onSubmit={formSubmitHandler} >
                 <h2>New todo</h2>
                 <div className="addNewTodoForm">
                     <label htmlFor="new-todo-header">*Title</label>
@@ -64,10 +64,7 @@ function NewTodoForm(props) {
                         type="text"
                         cols="4"
                     ></textarea>
-                    <button type="submit" id="add-todo">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.25 0.75H5.75V5.75H0.75V8.25H5.75V13.25H8.25V8.25H13.25V5.75H8.25V0.75Z" fill="white" />
-                        </svg>
+                    <button type="submit">
                         Add task
                     </button>
                 </div>

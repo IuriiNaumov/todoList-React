@@ -1,19 +1,18 @@
-import NewTodoForm from './NewTodoForm';
 import TodoList from './TodoList';
 import {useState} from 'react';
 import './App.css';
 
-
+const date = new Date();
 const INITIAL_TODOS = [
   {
     id: 't1',
     title: 'Позвонить Маме',
-    content: 'Напомнить купить кукурузу',
+    date: `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`,
   },
   {
     id: 't2',
     title: 'Макеты',
-    content: 'Посмотреть завтра макеты на Dribbble для этого чудесного приложения'
+    date: `${date.getDate()}. ${date.getMonth()}. ${date.getFullYear()}`,
   }
 ];
 
@@ -31,7 +30,6 @@ function App() {
   return (
   <div className="fixed-container">
     <TodoList todos = {todos} onRemoveTodo={RemoveTodoHandler}/>
-    <NewTodoForm onNewTodo = {AddTodoHandler}/>
   </div>  
   );
 }
