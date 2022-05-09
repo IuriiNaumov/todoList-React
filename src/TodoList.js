@@ -9,10 +9,6 @@ function TodoList(props) {
     const openFormHandler = () => {
         setOpenedForm(true);
     }
-    const closeFormHandler = () => {
-        setOpenedForm(false)
-    }
-
 
     return (
         <div className="todoList">

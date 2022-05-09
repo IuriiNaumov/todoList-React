@@ -84,11 +84,12 @@ button, button:active, button:focus {
 
 .todoInfo > div {
 	color: #797D7F;
-	font-size: 12pt;
+	font-size: 11pt;
 	display: flex;
-	gap: 5px;
+	gap: 2px;
 	align-items: center;
 	margin: 0;
+	font-family: 'Oswald', sans-serif;
 }
 
 .todoInfo > div > img {
