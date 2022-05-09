@@ -29,7 +29,7 @@ function App() {
 
   return (
   <div className="fixed-container">
-    <TodoList todos = {todos} onRemoveTodo={RemoveTodoHandler}/>
+    <TodoList todos = {todos} onRemoveTodo={RemoveTodoHandler} onNewTodo={AddTodoHandler}/>
   </div>  
   );
 }

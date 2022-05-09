@@ -26,15 +26,12 @@ function TodoList(props) {
                     <div>Список пуст...</div>
                 )}
             </div>
-            <div className="openFormButton">
-                <button onClick={openFormHandler}>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.25 0.75H5.75V5.75H0.75V8.25H5.75V13.25H8.25V8.25H13.25V5.75H8.25V0.75Z" fill="white" />
-                    </svg>
+            <div className="openFormButton" onClick={openFormHandler}>
+                <button onOpenForm={props.onAddTodo}>
                     New task
                 </button>
             </div>
-            {openedForm && <NewTodoForm onCloseForm={() => setOpenedForm(false)} />}
+            {openedForm && <NewTodoForm onNewTodo={props.onNewTodo} onCloseForm={() => setOpenedForm(false)} />}
         </div>
     );
 }

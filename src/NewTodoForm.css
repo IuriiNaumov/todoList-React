@@ -10,8 +10,6 @@ h2{
 	padding: 1rem;
 }
 
-
-
 input, textarea{
 	width: 100%;
     line-height: 40px;
@@ -81,6 +79,7 @@ button, button:active, button:focus {
 	padding: 1rem;
 	border-radius: 16px;
 	display: flex;
+	align-items: center;
 }
 
 .todoInfo > div {
@@ -131,9 +130,14 @@ button, button:active, button:focus {
 }
 
 .error {
-	border-color: #B03A2E;
+	border: 2px solid #e64a39;
+	
 }
 
+::placeholder{
+	font-size: 12pt;
+	color: #9ea0a0;
+}
 
 .todoList{
 	display: flex;
