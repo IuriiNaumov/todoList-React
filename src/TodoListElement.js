@@ -2,16 +2,17 @@ import calendar from "./images/calendar.png";
 export default TodoListElement;
 
 function TodoListElement(props) {
-    const removeTodoHandler = (event) => {
+    const removeTodoHandler = () => {
         props.onRemoveTodo(props.id);
     };
+    const date = `${props.date.getDate()}.${props.date.getMonth()}.${props.date.getFullYear()}`
     return (
         <div className="todo">
             <div className="todoInfo">
                 <h3>{props.title}</h3>
                 <div>
                     <img src={calendar}></img>
-                    {props.date}
+                    {date}
                 </div>
             </div>
             <div className="delete" onClick={removeTodoHandler}>

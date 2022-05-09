@@ -6,6 +6,8 @@ function NewTodoForm(props) {
     const [title, setTitle] = useState("");
     const [titleError, setTitleError] = useState(false);
 
+    
+
     const formSubmitHandler = (event) => {
         event.preventDefault();
         if (title === "") {
@@ -18,6 +20,7 @@ function NewTodoForm(props) {
             props.onNewTodo({
                 id: Math.random(),
                 title: title,
+                date: new Date(),
             });
             setTitle("");
         }
@@ -30,15 +33,12 @@ function NewTodoForm(props) {
     return (
         <div className="newTodoForm">
             <form onSubmit={formSubmitHandler} >
-                <h2>Add task</h2>
                 <div className="addNewTodoForm">
-                    <label htmlFor="new-todo-header">*Title</label>
+                    <h2>New task</h2>
                     <input
                         className={titleError ? "error" : ""}
                         value={title}
-                        placeholder='Название дела'
-                        type="text"
-                        name="new-todo-header"
+                        placeholder='Название задачи'
                         onChange={titleChangeHandler}
                     ></input>
                     <button type="submit">

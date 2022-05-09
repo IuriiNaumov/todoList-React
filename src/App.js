@@ -1,35 +1,40 @@
 import TodoList from './TodoList';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import './App.css';
 
-const date = new Date();
-const INITIAL_TODOS = [
-  {
-    id: 't1',
-    title: 'Позвонить Маме',
-    date: `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`,
-  },
-  {
-    id: 't2',
-    title: 'Макеты',
-    date: `${date.getDate()}. ${date.getMonth()}. ${date.getFullYear()}`,
-  }
-];
 
 function App() {
-  const [todos, setTodos] = useState(INITIAL_TODOS);
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem('todos'));
+    if(Array.isArray(todos)){
+      for(let i = 0; i < todos.length; i++){
+        todos[i].date = new Date(todos[i].date)
+      }
+      setTodos(todos);
+    }
+  }, []);
 
   const AddTodoHandler = element => {
-    setTodos(prev => [element, ...prev]);
+    setTodos(prev => {
+      localStorage.setItem('todos', JSON.stringify([element, ...prev])); 
+      return [element, ...prev]
+    
+    });
   }
 
   const RemoveTodoHandler = id => {
-    setTodos(prev => prev.filter(todo => todo.id !== id));
+    setTodos(prev => {
+      const newState = prev.filter(todo => todo.id !== id);
+      localStorage.setItem('todos', JSON.stringify(newState));
+      return newState;
+    });
   }
 
   return (
   <div className="fixed-container">
-    <TodoList todos = {todos} onRemoveTodo={RemoveTodoHandler} onNewTodo={AddTodoHandler}/>
+    <TodoList todos={todos} onRemoveTodo={RemoveTodoHandler} onNewTodo={AddTodoHandler}/>
   </div>  
   );
 }

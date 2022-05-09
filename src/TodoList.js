@@ -8,11 +8,11 @@ function TodoList(props) {
 
     const openFormHandler = () => {
         setOpenedForm(true);
-        console.log('123')
     }
     const closeFormHandler = () => {
         setOpenedForm(false)
     }
+
 
     return (
         <div className="todoList">
@@ -27,7 +27,7 @@ function TodoList(props) {
                 )}
             </div>
             <div className="openFormButton" onClick={openFormHandler}>
-                <button onOpenForm={props.onAddTodo}>
+                <button>
                     New task
                 </button>
             </div>
