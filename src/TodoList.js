@@ -1,7 +1,6 @@
 import TodoListElement from "./TodoListElement";
 import NewTodoForm from "./NewTodoForm";
 import { useState } from "react";
-export default TodoList;
 
 function TodoList(props) {
     const[openedForm, setOpenedForm] = useState(false)
@@ -16,7 +15,7 @@ function TodoList(props) {
             <div className="todos">
                 {props.todos.length ? (
                     props.todos.map((todo) => (
-                        <TodoListElement id={todo.id} key={todo.id} title={todo.title} date={todo.date} onRemoveTodo={props.onRemoveTodo} />
+                        <TodoListElement id={todo.id} key={todo.id} title={todo.title} date={todo.date} time={todo.time} option={todo.option} onRemoveTodo={props.onRemoveTodo} />
                     ))
                 ) : (
                     <div>Список пуст...</div>
@@ -31,5 +30,4 @@ function TodoList(props) {
         </div>
     );
 }
-
-//
+export default TodoList;
