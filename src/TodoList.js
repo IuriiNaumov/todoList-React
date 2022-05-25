@@ -3,28 +3,35 @@ import NewTodoForm from "./NewTodoForm";
 import { useState } from "react";
 
 function TodoList(props) {
-    const[openedForm, setOpenedForm] = useState(false)
+    const [openedForm, setOpenedForm] = useState(false);
 
     const openFormHandler = () => {
         setOpenedForm(true);
-    }
+    };
 
     return (
         <div className="todoList">
-            <h2>My tasks</h2>
+            <h1>Todo list</h1>
             <div className="todos">
                 {props.todos.length ? (
                     props.todos.map((todo) => (
-                        <TodoListElement id={todo.id} key={todo.id} title={todo.title} date={todo.date} time={todo.time} option={todo.option} onRemoveTodo={props.onRemoveTodo} />
+                        <TodoListElement
+                            id={todo.id}
+                            key={todo.id}
+                            title={todo.title}
+                            date={new Date(todo.date)}
+                            hours={todo.hours}
+                            minutes={todo.minutes}
+                            option={todo.option}
+                            onRemoveTodo={props.onRemoveTodo}
+                        />
                     ))
                 ) : (
-                    <div>Список пуст...</div>
+                    <div>Empty list...</div>
                 )}
             </div>
             <div className="openFormButton" onClick={openFormHandler}>
-                <button>
-                    New task
-                </button>
+                <button>New task</button>
             </div>
             {openedForm && <NewTodoForm onNewTodo={props.onNewTodo} onCloseForm={() => setOpenedForm(false)} />}
         </div>

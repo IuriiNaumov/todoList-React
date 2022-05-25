@@ -1,17 +1,15 @@
 html, body {
-	background-color: #F4F6F6;
-	font-family: 'Montserrat';
+	background-color: #F5F5F5;
+	font-family: 'Oswald', sans-serif;
 	margin: 0;
 }
 
 h2{
-	font-family: 'Oswald', sans-serif;
 	margin: 0;
-	padding: 1rem 0 0;
+	color: black;
 }
 
 input{
-    font-family: 'Oswald', sans-serif;
     font-size: 16pt;
     border: 1px solid #ebebeb;
     background-color: #F8F9F9;
@@ -20,6 +18,10 @@ input{
 
 input:focus-visible{
 	outline: 2px solid black;
+}
+
+select{
+	font-size: 14pt;
 }
 
 .fixed-container{
@@ -53,14 +55,13 @@ input:focus-visible{
 
 button {
 	display: flex;
-	align-items: center;
 	gap: 10px;
 	justify-content: center;
 	border-radius: 4px;
 	width: 200px;
 	padding: 0.8rem;
 	font-size: 12pt;
-	background-color: #000000;
+	background-color: #383838;
 	color: white;
 	border: none;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -71,7 +72,7 @@ button {
 
 .todo {
 	background-color: rgb(255, 255, 255);
-	padding: 1rem;
+	padding: 1rem 0 1rem 1rem;
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
@@ -79,29 +80,24 @@ button {
 }
 
 .todoInfo {
-	color: #797D7F;
+	color: #747474;
 	font-size: 11pt;
 	display: flex;
-	gap: 4px;
 	margin: 0;
-	font-family: 'Oswald', sans-serif;
-}
-
-.delete{
-	cursor: pointer;
-}
-
-.todoInfo h3{
-	margin: 0;
-}
-
-.todoInfo {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
 	gap: 5px;
-	
 }
+
+.delete{
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+
+}
+
 
 .todos{
 	display: flex;
@@ -114,15 +110,9 @@ button {
 	display: flex;
 	align-items: center;
 	gap: 5px;
-	font-family: 'Oswald', sans-serif;
 	font-size: 14pt;
 }
 
-.todoLogo img{
-	width: 60px;
-	height: 60px;
-	cursor: pointer;
-}
 
 .error {
 	border: 2px solid #b54539;
@@ -140,17 +130,64 @@ button {
 	padding: 1rem;
 	position: relative;
 }
+.todoList > h1 {
+	font-size: 20pt;
+	margin: 0;
+}
+
 .time {
 	display: flex;
 	gap: 10px;
 }
+
 .todoName{
 	display: flex;
 	gap: 5px;
 	align-items: center;
-
 }
-.todoName > h3{
-	font-size: 16pt;
-	color: #000000;	
+
+.todoTime{
+	display: flex;
+	gap: 5px;
+}
+
+.time > input {
+	width: 40%;
+}
+
+.closeFormButton{
+	color: #323232;
+	background-color: #F5F5F5;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	font-size: 14pt;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #323232;
+	transition: transform 0.5s;
+	font-weight: bold;
+}
+
+.closeForm :hover{
+	background-color: #db3f2e;
+	color: white;
+	border: 2px solid #F5F5F5;
+	transform: rotate(270deg);
+}
+.closeForm {
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	
+}
+
+.modal{
+	position: relative;
+}
+
+.delete :hover {
+	fill: #db3f2e;
 }
