@@ -1,0 +1,13 @@
+.sidePanel{
+	background-color: #323232;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	height: 100vh;
+	justify-content: center;
+	color: white;
+	width: 6vw;
+	flex-grow: 0;
+	align-items: flex-start;
+	justify-content: flex-start;
+}

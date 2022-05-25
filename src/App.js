@@ -1,4 +1,5 @@
 import TodoList from "./TodoList";
+import SidePanel from "./SidePanel";
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -32,6 +33,7 @@ function App() {
 
     return (
         <div className="fixed-container">
+            <SidePanel/>
             <TodoList todos={todos} onRemoveTodo={RemoveTodoHandler} onNewTodo={AddTodoHandler} />
         </div>
     );

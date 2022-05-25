@@ -14,14 +14,17 @@ input{
     border: 1px solid #ebebeb;
     background-color: #F8F9F9;
 	padding: 0.5rem;
+	border-radius: 4px;
 }
 
 input:focus-visible{
 	outline: 2px solid black;
+	border-radius: 4px;
 }
 
 select{
 	font-size: 14pt;
+	border-radius: 4px;
 }
 
 .fixed-container{
@@ -29,11 +32,8 @@ select{
 	gap: 20px;
 	align-items: top;
 	justify-content: center;
+	height: 100%;
 	
-}
-
-.fixed-container > div{
-	width: 470px;
 }
 
 .addNewTodoForm{
@@ -43,7 +43,6 @@ select{
 	flex-direction: column;
 	gap: 20px;
 	border-radius: 16px;
-	position: absolute;
 	left: 0;
 	right: 0;
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -103,7 +102,7 @@ button {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	width: 100%;
+	width: 30vw;
 }
 
 .todoLogo{
@@ -129,6 +128,8 @@ button {
 	gap: 20px;
 	padding: 1rem;
 	position: relative;
+	flex-grow: 1;
+	align-items: center;
 }
 .todoList > h1 {
 	font-size: 20pt;
