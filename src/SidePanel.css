@@ -1,13 +1,53 @@
 .sidePanel{
-	background-color: #323232;
+	background-color: #F5F5F5;
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
 	height: 100vh;
+	color: #323232;
+	width: 10vw;
+	border-right: 1px solid #323232;
+	position: relative;
+}
+
+.sidePanelLinks {
+	display: flex;
+	flex-direction: column;
+	font-size: 20pt;
+	width: 100%;
+}
+
+.sidePanelLinks > a{
+	padding: 1rem 1rem;
+	cursor: pointer;
+}
+
+.sidePanelLinks :hover{
+	color: #F5F5F5;
+	background-color: #323232;
+}
+
+.avatar > img {
+	width: 50px;
+	height: 50px;
+	padding: 1rem;
+}
+.avatar{ 
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+.closeSidePanelButton{
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
 	justify-content: center;
-	color: white;
-	width: 6vw;
-	flex-grow: 0;
-	align-items: flex-start;
-	justify-content: flex-start;
+	background-color: #F5F5F5;
+	border: 1px solid #323232;
+	position: absolute;
+	bottom: 50vh;
+	right: -30px;
+	border-radius: 50%;
+	cursor: pointer;
+	transform: scaleX(-1);
 }
