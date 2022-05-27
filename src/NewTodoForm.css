@@ -130,6 +130,7 @@ button {
 	position: relative;
 	flex-grow: 1;
 	align-items: center;
+	flex-grow: 1;
 }
 .todoList > h1 {
 	font-size: 20pt;
@@ -189,6 +190,21 @@ button {
 	position: relative;
 }
 
+
 .delete :hover {
 	fill: #db3f2e;
+}
+
+
+.x{
+	display: flex;
+	flex-grow: 1;
+}
+
+.openPanelButton{
+	height: 10px;
+	width: 10px;
+	margin-left: 2vh;
+	background-color: #F5F5F5;
+	box-shadow: none;
 }

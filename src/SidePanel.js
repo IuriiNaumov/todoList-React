@@ -1,8 +1,8 @@
 import style from "./SidePanel.css";
 import avatar from "./images/avatar.png";
-import arrow from './images/arrow.svg'
+import arrow from "./images/arrow.svg";
 
-function sidePanel() {
+function sidePanel(props) {
     return (
         <aside className="sidePanel">
             <div className="avatar">
@@ -14,8 +14,8 @@ function sidePanel() {
                 <a>Tasks</a>
                 <a>Settings</a>
             </div>
-            <div className="closeSidePanelButton">
-               <img src={arrow}></img> 
+            <div className="closeSidePanelButton" onClick={props.onClosePanel}>
+                <img src={arrow}></img>
             </div>
         </aside>
     );

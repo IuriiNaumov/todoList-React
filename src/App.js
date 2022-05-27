@@ -5,6 +5,7 @@ import "./App.css";
 
 function App() {
     const [todos, setTodos] = useState([]);
+    const [panel, setOpenPanel] = useState(false);
 
     useEffect(() => {
         const todos = JSON.parse(localStorage.getItem("todos"));
@@ -31,10 +32,18 @@ function App() {
         });
     };
 
+    const openPanelHandler = () => {
+        setOpenPanel(true);
+    };
+
+    const closePanelHandler = () => {
+        setOpenPanel(false);
+    };
+
     return (
         <div className="fixed-container">
-            <SidePanel/>
-            <TodoList todos={todos} onRemoveTodo={RemoveTodoHandler} onNewTodo={AddTodoHandler} />
+            {panel ? <SidePanel onClosePanel={closePanelHandler} /> : ""}
+            <TodoList todos={todos} onRemoveTodo={RemoveTodoHandler} onNewTodo={AddTodoHandler} onOpenPanel={openPanelHandler} />
         </div>
     );
 }
